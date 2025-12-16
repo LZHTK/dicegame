@@ -6,7 +6,7 @@ import handScissors from './assets/scissor.svg';
 const handIcons = {
     rock: handRock,
     paper: handPaper,
-    scissors: handScissors,
+    scissor: handScissors,
 }
 function HandIcon({ value }) {
 
