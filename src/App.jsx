@@ -3,6 +3,7 @@ import Button from './Button';
 import HandButton from './HandButton';
 import HandIcon from './HandIcon';
 import { generateRandomHand, getResult } from './util';
+import ResultCard from './ResultCard';
 
 const INITIAL_VALUE = 'rock';
 
@@ -48,10 +49,13 @@ function App() {
             </div>
 
             <div>
-                <h3>나</h3>
-                <HandIcon value={hand} /> 점수 : {score}
-                <h3>상대</h3>
-                <HandIcon value={otherHand} /> 점수 : {otherScore}
+                <h2>결과</h2>
+                <ResultCard 
+                name="나" hand={hand} score={score} result={getResult(hand, otherHand)}
+                />
+                <ResultCard
+                name="상대" hand={otherHand} score={otherScore} result={getResult(otherHand, hand)}
+                />
             </div>
             <h2>승부 기록</h2>
             <div>{gameHistory.join(', ')}</div>
