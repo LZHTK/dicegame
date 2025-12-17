@@ -1,0 +1,52 @@
+.main {
+  width: 456px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 40px;
+  margin: 80px 0 32px;
+  text-align: center;
+}
+
+.box {
+  border-radius: 32px;
+  background: #272d3a;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2);
+  padding: 28px 36px;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.handButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0 32px;
+}
+
+.gameHistory {
+  font-size: 15px;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #323949;
+  margin: 16px 0 28px;
+  min-height: 170px;
+}
+
+.resetButton {
+  display: flex;
+  justify-content: center;
+}

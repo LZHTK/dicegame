@@ -1,15 +1,21 @@
-import HandIcon from "./HandIcon";
+import HandIcon from './HandIcon';
+import styles from './ResultCard.module.css';
 
 function ResultCard({ name, hand, score, result }) {
-    console.log(`${name}: ${result}`);
+  const classNames = [
+    styles.resultCard,
+    result === '승리' ? styles.winner : '',
+    result === '패배' ? styles.loser : '',
+  ].join(' ');
 
-    return (
-        <div>
-            <h3>{name}</h3>
-            <HandIcon value={hand} />
-            점수 : {score}
-        </div>
-    );
+  return (
+    <div className={classNames}>
+      <div className={styles.chip}>승리</div>
+      <div className={styles.name}>{name}</div>
+      <HandIcon value={hand} />
+      <div className={styles.score}>{score}</div>
+    </div>
+  );
 }
 
 export default ResultCard;
